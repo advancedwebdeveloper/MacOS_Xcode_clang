@@ -27,4 +27,5 @@ jobs:
         run: which mdfind
       - name: Checking if we have "find"
         run: which find
-
+      - name: Searching for libLLVM
+        run: locate libLLVM*
