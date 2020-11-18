@@ -19,7 +19,7 @@ jobs:
     runs-on: macos-10.15
     steps:
       - uses: actions/checkout@v2
-       - name: Checking if we have "locate"
+      - name: Checking if we have "locate"
         run: which locate
       - name: Checking if we have "mdfind"
         run: which mdfind
