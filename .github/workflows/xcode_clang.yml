@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Checking if we have "locate"
-        run: which locate
+        run: which locate && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
       - name: Checking if we have "mdfind"
         run: which mdfind
       - name: Checking if we have "find"
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Checking if we have "locate"
-        run: which locate
+        run: which locate && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
       - name: Checking if we have "mdfind"
         run: which mdfind
       - name: Checking if we have "find"
