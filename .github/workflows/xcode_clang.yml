@@ -10,11 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Checking if we have "locate"
-        run: which locate && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+        run: which locate
       - name: Checking if we have "mdfind"
         run: which mdfind
       - name: Checking if we have "find"
-        run: which find
+        run: which find && find / -name libLLVM*
       - name: Searching for libLLVM
         run: locate libLLVM*
   macOS_10_Catalina_search:
@@ -22,10 +22,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Checking if we have "locate"
-        run: which locate && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+        run: which locate
       - name: Checking if we have "mdfind"
         run: which mdfind
       - name: Checking if we have "find"
-        run: which find
+        run: which find && find / -name libLLVM*
       - name: Searching for libLLVM
         run: locate libLLVM*
