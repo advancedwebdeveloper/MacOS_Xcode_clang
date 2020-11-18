@@ -15,7 +15,7 @@ jobs:
         run: which mdfind
       - name: Checking if we have "find"
         run: which find
-  macOS_10.15_Catalina_search:
+  macOS_10_Catalina_search:
     runs-on: macos-10.15
     steps:
       - uses: actions/checkout@v2
