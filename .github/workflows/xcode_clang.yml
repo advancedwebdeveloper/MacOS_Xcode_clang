@@ -1,4 +1,4 @@
-name: Searching for Clang's libs
+name: Searching for LLVM's libs
 on:
   create:
     branches: [ main ]
