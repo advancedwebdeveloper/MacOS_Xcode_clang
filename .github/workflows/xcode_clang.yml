@@ -1,0 +1,28 @@
+name: Searching for Clang's libs
+on:
+  create:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  macOS Big Sur 11.0:
+    runs-on: macos-11.0
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checking if we have "locate"
+        run: which locate
+      - name: Checking if we have "mdfind"
+        run: which mdfind
+      - name: Checking if we have "find"
+        run: which find
+  macOS Catalina 10.15:
+    runs-on: macos-10.15
+    steps:
+      - uses: actions/checkout@v2
+       - name: Checking if we have "locate"
+        run: which locate
+      - name: Checking if we have "mdfind"
+        run: which mdfind
+      - name: Checking if we have "find"
+        run: which find
+
